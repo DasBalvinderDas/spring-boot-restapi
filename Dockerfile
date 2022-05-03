@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
-RUN cd spring-boot-restapi
+WORKDIR spring-boot-restapi
 RUN chmod 700 mvnw
 RUN mvnw clean install 
 ARG JAR_FILE=target/*.jar
