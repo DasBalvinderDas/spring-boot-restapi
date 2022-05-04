@@ -11,6 +11,6 @@ steps:
   args: ['push','gcr.io/${_PROJECT_ID}/${_CINAME}:${_VERSION}']
 
 substitutions:
-  _PROJECT_ID : gcp-devops-338510
+  _PROJECT_ID : electric-facet-286311
   _CINAME : gke-image
   _VERSION : v1.0
