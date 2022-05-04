@@ -17,6 +17,6 @@ public class SpringBootDockerDemoApplication {
 
     @GetMapping("/hello")
     public String getHello(){
-        return "hello!";
+        return "hello! Inside K8S";
     }
 }
