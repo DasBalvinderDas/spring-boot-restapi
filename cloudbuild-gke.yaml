@@ -1,0 +1,16 @@
+#https://source.developers.google.com/p/gcp-devops-338510/r/repo-5
+
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://github.com/DasBalvinderDas/spring-boot-restapi']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build','-t',  'gcr.io/${_PROJECT_ID}/${_CINAME}:${_VERSION}', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push','gcr.io/${_PROJECT_ID}/${_CINAME}:${_VERSION}']
+
+substitutions:
+  _PROJECT_ID : gcp-devops-338510
+  _CINAME : gke-image
+  _VERSION : v1.0
