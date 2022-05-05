@@ -16,7 +16,7 @@ steps:
   - 'set'
   - 'image'
   - 'deployment/greet-app-1'
-  - 'spring-boot-restapi-sha256-1=gcr.io/${_PROJECT_ID}/${_CINAME}:${_VERSION}'
+  - 'gke-image-sha256-1=gcr.io/${_PROJECT_ID}/${_CINAME}:${_VERSION}'
   env :
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
