@@ -17,6 +17,6 @@ public class SpringBootDockerDemoApplication {
 
     @GetMapping("/hello")
     public String getHello(){
-        return "hello! Inside K8S, new version 3";
+        return "hello! Inside K8S, new version 4";
     }
 }
